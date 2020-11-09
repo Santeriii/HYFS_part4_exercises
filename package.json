@@ -1,0 +1,34 @@
+{
+  "name": "hyfs_part4_exercises",
+  "version": "0.0.1",
+  "description": "Exercses for HYFS part 4",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Santeriii/HYFS_part4_exercises.git"
+  },
+  "keywords": [
+    "Node",
+    "Backend",
+    "Exercises"
+  ],
+  "author": "Santeri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Santeriii/HYFS_part4_exercises/issues"
+  },
+  "homepage": "https://github.com/Santeriii/HYFS_part4_exercises#readme"
+}
