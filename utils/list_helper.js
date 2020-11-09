@@ -8,8 +8,22 @@ const dummy = (blogs) => {
 
       return total
   }
+
+  const favoriteBlog = (blogs) => {
+    let favorite = ''
+    blogs.map(blog => {
+      if (favorite == '') {
+        favorite = blog
+      } else if (favorite.likes < blog.likes) {
+        favorite = blog
+      }
+    })
+
+    return favorite
+  }
   
   module.exports = {
     dummy,
-    totalLikes
+    totalLikes,
+    favoriteBlog
   }
