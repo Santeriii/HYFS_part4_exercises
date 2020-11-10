@@ -38,6 +38,30 @@ test('blogs have a field called "id" for identification', async () => {
   expect(contents[0]).toBeDefined();
 })
 
+test('a valid blog can be added ', async () => {
+  const newBlog = {
+    title: "Ruokablog",
+    author: "Valtter",
+    url: "ruokablogi.t",
+    likes:5,
+  }
+
+  await api
+    .post('/api/blogs')
+    .send(newBlog)
+    .expect(200)
+    .expect('Content-Type', /application\/json/)
+
+  const response = await api.get('/api/blogs')
+
+  const titles = response.body.map(r => r.title)
+
+  expect(response.body).toHaveLength(initialBlogs.length + 1)
+  expect(titles).toContain(
+    'Ruokablog'
+  )
+})
+
 afterAll(() => {
   mongoose.connection.close()
 })
