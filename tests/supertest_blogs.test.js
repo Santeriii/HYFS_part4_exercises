@@ -29,7 +29,14 @@ test('there are two blogs', async () => {
     const response = await api.get('/api/blogs')
   
     expect(response.body).toHaveLength(initialBlogs.length)
-  })
+})
+
+test('blogs have a field called "id" for identification', async () => {
+  const response = await api.get('/api/blogs')
+
+  const contents = response.body.map(blog => blog.id)
+  expect(contents[0]).toBeDefined();
+})
 
 afterAll(() => {
   mongoose.connection.close()
