@@ -80,6 +80,18 @@ test('if field "likes" has not been given a value, its" value is set to "0"', as
   expect(response.body[initialBlogs.length].likes).toBe(0)
 })
 
+test('if fields "title" and "url" have not been given, a status "400, bad request" is given', async () => {
+  const newBlog = {
+    author: "Valtter",
+    likes: 2,
+  }
+
+  await api
+    .post('/api/blogs')
+    .send(newBlog)
+    .expect(400)
+})
+
 afterAll(() => {
   mongoose.connection.close()
 })
