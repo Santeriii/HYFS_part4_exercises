@@ -24,7 +24,16 @@ const errorHandler = (error, request, response, next) => {
   next(error)
 }
 
+const tokenExtractor = (request, response, next) => {
+  const token = request.headers.authorization
+  console.log(token)
+  request.token = token
+
+  next()
+}
+
 module.exports = {
+  tokenExtractor,
   requestLogger,
   unknownEndpoint,
   errorHandler

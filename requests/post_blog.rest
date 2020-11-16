@@ -1,9 +1,9 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpIiwiaWQiOiI1ZmIyZDFjM2VjYmQ3YzAyYjhiOGY3YTUiLCJpYXQiOjE2MDU1NTU4OTJ9.Cz-sB-F5UOd5n1Qa5yqpiFLJUrH74Jqypo0ybrg-AiA
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpIiwiaWQiOiI1ZmIyZDFjM2VjYmQ3YzAyYjhiOGY3YTUiLCJpYXQiOjE2MDU1NTgwMjZ9.bwL_aStDdNaWGn_iHOPi5DhFK0dsrQTYAv8jHx-nuXc
 
 {
-   "title": "Authorization Test",
+   "title": "Authorization Test 2",
     "author": "Testi-Timo",
     "url": "test.som",
     "likes": 100
