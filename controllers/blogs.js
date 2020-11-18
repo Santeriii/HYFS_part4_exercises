@@ -39,6 +39,7 @@ blogsRouter.get('/', async (request, response) => {
         user.blogs = user.blogs.concat(savedBlog.id)
         await user.save()
         response.json(savedBlog.toJSON())
+        return 
       } else {
         response.status(400).end()
       }
